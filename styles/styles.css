@@ -1,26 +1,34 @@
-
+/* Variables */
 :root{
     --color-white: #fff;
     --color-black: #000;
     --color-blue: #0099aa;
 }
 
+/*******************************************************************************************************************/
+/* color de fondo general */
 body{
     background-color: var(--color-blue);
+    margin: 0;
 }
+
+/* Estilos generales para etiqueta "p" */
 p{
     color: var(--color-white);
     text-align: center;
     font-size: 1.2rem;
     font-weight: 600;
 }
+
+/*******************************************************************************************************************/
+/* Contenedor de la calculadora */
 .container {
     display: flex;
     width: 50%;
     height: 650px;
     margin: 100px auto;
 }
-
+/* Formulario que contiene los inputs y engeneral la calculadora */
 .form {
     display: block;
     background-color: var(--color-black);
@@ -33,6 +41,7 @@ p{
                 0 0 30px rgb(255, 255, 255);
 }
 
+/* Estilos generales de cada linea dentro del form */
 .form__linea {
     color: var(--color-white);
     display: flex; /* Cambiado de block a flex */
@@ -41,18 +50,21 @@ p{
     margin: 50px auto; /* Agregado */
 }
 
+/* Estilos que se activan al pasar el puntero en cima de los parrafos del formulario */
 .form__linea--p:hover{
     padding: 5px;
     margin: auto 40%;
     border: 2px solid var(--color-white);
 }
 
+/* inputs del formulario */
 .form__linea--input{
     color: var(--color-black);
     padding: 5px;
     text-decoration: none;
 }
 
+/* botones del formulario */
 .form__linea--buttom{
     background-color: var(--color-black);
     border: 2px solid var(--color-white);
@@ -60,6 +72,7 @@ p{
     border-radius: 15px;
 }
 
+/* botones del formulario, al pasar el puntero encima de ellos*/
 .form__linea--buttom:hover{
     background-color: var(--color-white);
     color: var(--color-black);
@@ -67,17 +80,36 @@ p{
     font-size: 1rem;
 }
 
+/* Contenedor de los botones que activan los resultados */
 .container-buttons{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
 }
 
-
+/* Parrafo que muestra el resultado final */
 #resultado{
     color: var(--color-blue);
 }
 
+/*******************************************************************************************************************/
+.footer{
+    background-color: var(--color-black);
+    display: flex;
+    width: 100%;
+    height: 75px;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer__text{
+    font-size: 15px;
+}
+
+
+
+/*******************************************************************************************************************/
+/* Meida querys que hacen posible el diseño responsivo */
 @media(max-width: 650px){
     .container{
         height: 800px;
@@ -98,3 +130,4 @@ p{
         padding: 5px;
     }
 }
+

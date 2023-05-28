@@ -1,31 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Metadatos -->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- conexion a css y js, y titulo -->
     <link rel="stylesheet" href="./styles/styles.css">
     <script src="./js/index.js"></script>
     <title>Calculadora</title>
 </head>
 <body>
+
     <div class="container">
+        <!-- Formulario -->
         <form class="form" action="">
             <button class="form__linea form__linea--buttom" id="miFormulario" onclick="limpiar();" >limpiar campos</button>
+            <!-- texto e inputs -->
             <p class="form__linea form__linea--p" for="">Número 1</p>
             <input class="form__linea form__linea--input" type="number" id="valor1" placeholder="Escribe un numero">
+            
             <p class="form__linea form__linea--p" for="">Número 2</p>
             <input class="form__linea form__linea--input" type="number" id="valor2" placeholder="Escribe otro numero">
+            <!-- Contenedor de botones de operaciones -->
             <div class="container-buttons" >  
                 <button class="form__linea form__linea--buttom" type="button" onclick="suma();" >Suma</button>
                 <button class="form__linea form__linea--buttom" type="button" onclick="resta();" >Resta</button>
                 <button class="form__linea form__linea--buttom" type="button" onclick="multiplicacion();" >Multiplicacion</button>
                 <button class="form__linea form__linea--buttom" type="button" onclick="division();" >Division</button>
             </div>
+            <!-- Resultado -->
             <p>El resultado es: 
                 <span id="resultado"></span>
             </p>
         </form>
     </div>
 </body>
+    <!-- Pie de pagina -->
+    <footer class="footer">
+        <p class="footer__text"> Derechos reservados </p>
+    </footer>
 </html>
